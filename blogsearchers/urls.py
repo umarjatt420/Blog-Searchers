@@ -19,7 +19,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from blogs.views import Home
 from blogs.views import BlogDetail
-from blogs.views import Category
+from blogs.views import AI
+from blogs.views import InformationTech
 from blogs.views import Contact
 from blogs.views import About
 from blogs.views import Terms
@@ -32,5 +33,14 @@ urlpatterns = [
     path('about-us/', About.as_view()),
     path('terms&conditions/', Terms.as_view()),
     path('privacy-policy/', PrivacyPolicy.as_view()),
-    path('cat/', Category.as_view()),
+    path('category/artificial-intelligence/', AI.as_view()),
+    path('category/information-technology/', InformationTech.as_view()),
+    path('category/computer-network/', AI.as_view()),
+    path('category/programming/', AI.as_view()),
+    path('category/operating-systems/', AI.as_view()),
+    path('category/robotics/', AI.as_view()),
+    path('category/quantum-computing/', AI.as_view()),
+    path('category/data-science/', AI.as_view()),
+    path('category/automation/', AI.as_view()),
+    path('category/virtual-reality/', AI.as_view()),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

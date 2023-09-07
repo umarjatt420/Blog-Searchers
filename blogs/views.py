@@ -15,10 +15,16 @@ class BlogDetail(View):
         queryset = Blog.objects.get(id=obj_id)
         return render(request, 'blog-detail.html', {'object': queryset})
 
-class Category(View):
+class AI(View):
     @staticmethod
     def get(request):
-        return render(request, 'category.html')
+        return render(request, 'artificial-intelligence.html')
+
+
+class InformationTech(View):
+    @staticmethod
+    def get(request):
+        return render(request, 'informationTech.html')
 
 class Contact(View):
     @staticmethod
