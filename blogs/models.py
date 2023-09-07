@@ -5,11 +5,15 @@ from ckeditor.fields import RichTextField
 class Blog(models.Model):
     picture = models.FileField()
     category = models.CharField(max_length=20, choices=(
-        ("TECH", "Technology"),
-        ("FOOD", "Food"),
-        ("TRAV", "Traveling"),
-        ("PET", "Pet Food"),
-        ("TEST", "Testing"),
+        ("AI", "Artificial Intelligence"),
+        ("IT", "Information Technology"),
+        ("CN", "Computer Network"),
+        ("PROGRAMMING", "Programming"),
+        ("ROBOTICS", "Robotics"),
+        ("QC", "Quantum Computing"),
+        ("DS", "Data Science"),
+        ("AUTOMATION", "Automation"),
+        ("VR", "Virtual Reality"),
     ), default=None)
     datetime = models.DateTimeField(auto_now_add=True)
     heading = models.CharField(max_length=120)
