@@ -32,4 +32,5 @@ urlpatterns = [
     path('about-us/', About.as_view()),
     path('terms&conditions/', Terms.as_view()),
     path('privacy-policy/', PrivacyPolicy.as_view()),
+    path('cat/', Category.as_view()),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
